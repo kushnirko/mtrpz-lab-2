@@ -4,7 +4,9 @@
   "description": "Laboratory work 1 on the discipline \"Methodologies and technologies of software development\"",
   "main": "app.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "lint": "eslint . && prettier -c \"**/*.js\" \"**/*.json\" \"**/*.md\"",
+    "fmt": "prettier -w \"**/*.js\" \"**/*.json\" \"**/*.md\""
   },
   "author": "Mykola Kushnir",
   "license": "MIT",
