@@ -1,0 +1,11 @@
+{
+  "name": "mtrpz-lab-1",
+  "version": "1.0.0",
+  "description": "Laboratory work 1 on the discipline \"Methodologies and technologies of software development\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Mykola Kushnir",
+  "license": "MIT"
+}
