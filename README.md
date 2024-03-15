@@ -20,3 +20,5 @@ To use this tool, you must have [Node.js](https://nodejs.org/en) installed on yo
 ## Example
 
 ## Links
+
+### [Revert commit](https://github.com/kushnirko/mtrpz-lab-1/commit/5a9332f863f6fbc53a02b869185d9409dee94b7c)
