@@ -5,7 +5,6 @@
   "main": "lib/app.js",
   "type": "module",
   "scripts": {
-    "test": "test",
     "lint": "eslint . && prettier -c \"**/*.js\" \"**/*.json\" \"**/*.md\"",
     "fmt": "prettier -w \"**/*.js\" \"**/*.json\" \"**/*.md\""
   },
