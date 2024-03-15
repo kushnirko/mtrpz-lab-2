@@ -3,6 +3,3 @@ node_modules/
 
 # JetBrains IDEs folder for project-specific settings
 .idea/
-
-# Folder with examples of .md and .html files (for testing)
-example/
