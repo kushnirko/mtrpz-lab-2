@@ -6,6 +6,9 @@ The resulting HTML markup is either printed to [standard output](https://en.wiki
 
 The tool also validates Markdown markup for correctness. If errors are encountered, it prints the appropriate message to [standard error](https://en.wikipedia.org/wiki/Standard_streams) (stderr) and exits with a non-zero status code.
 
+> [!CAUTION]
+> The current version of the tool can only handle files with UNIX line endings (LF or `'\n'`)
+
 ## Prerequisites
 
 To use this tool, you must have [Node.js](https://nodejs.org/en) installed on your system.
@@ -19,6 +22,9 @@ Clone this repository to the desired location on your system:
 ```bash
 git clone --depth 1 https://github.com/kushnirko/mtrpz-lab-1.git /path/to/desired/location/ 
 ```
+
+> [!NOTE]
+> Alternatively, you can download the source code archive of the latest release
 
 ## Usage
 
