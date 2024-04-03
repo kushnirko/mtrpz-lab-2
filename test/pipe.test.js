@@ -1,5 +1,5 @@
 import { test, expect } from '@jest/globals';
-import { pipe } from '../lib/utils.js';
+import pipe from '../lib/pipe.js';
 
 test('Function pipe', () => {
   const pow2 = (value) => value * value;
