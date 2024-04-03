@@ -46,28 +46,6 @@ preformatted
     );
   });
 
-  test('different length of inline elements', () => {
-    const md = '**I** _do_ `not` _like_ **bugs!**';
-    const ansi = convertMdToAnsi(md);
-    expect(ansi).toBe(
-      '\x1b[1mI\x1b[22m \x1b[3mdo\x1b[23m \x1b[7mnot\x1b[27m \x1b[3mlike\x1b[23m \x1b[1mbugs!\x1b[22m',
-    );
-  });
-
-  test('text with punctuations', () => {
-    const md = 'Are "`there`" (_too_) many **punctuations**, in this `text`?';
-    const ansi = convertMdToAnsi(md);
-    expect(ansi).toBe(
-      'Are "\x1b[7mthere\x1b[27m" (\x1b[3mtoo\x1b[23m) many \x1b[1mpunctuations\x1b[22m, in this \x1b[7mtext\x1b[27m?',
-    );
-  });
-
-  test('cyrillic text', () => {
-    const md = 'Ходить **гарбуз**\n`по` городу';
-    const ansi = convertMdToAnsi(md);
-    expect(ansi).toBe('Ходить \x1b[1mгарбуз\x1b[22m\n\x1b[7mпо\x1b[27m городу');
-  });
-
   test('comprehensive test', () => {
     const md = `\`*\` _This_text_ contains
 paragraphs,

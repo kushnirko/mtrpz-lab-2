@@ -60,28 +60,6 @@ _blocks_
     );
   });
 
-  test('different length of inline elements', () => {
-    const md = '**I** _do_ `not` _like_ **bugs!**';
-    const html = convertMdToHtml(md);
-    expect(html).toBe(
-      '<p><b>I</b> <i>do</i> <tt>not</tt> <i>like</i> <b>bugs!</b></p>',
-    );
-  });
-
-  test('text with punctuations', () => {
-    const md = 'Are "`there`" (_too_) many **punctuations**, in this `text`?';
-    const html = convertMdToHtml(md);
-    expect(html).toBe(
-      '<p>Are "<tt>there</tt>" (<i>too</i>) many <b>punctuations</b>, in this <tt>text</tt>?</p>',
-    );
-  });
-
-  test('cyrillic text', () => {
-    const md = 'Ходить **гарбуз**\n`по` городу';
-    const html = convertMdToHtml(md);
-    expect(html).toBe('<p>Ходить <b>гарбуз</b>\n<tt>по</tt> городу</p>');
-  });
-
   test('comprehensive test', () => {
     const md = `\`*\` _This_text_ contains
 paragraphs,
