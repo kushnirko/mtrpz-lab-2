@@ -6,9 +6,6 @@ The resulting HTML markup is either printed to [standard output](https://en.wiki
 
 The tool also validates Markdown markup for correctness. If errors are encountered, it prints the appropriate message to [standard error](https://en.wikipedia.org/wiki/Standard_streams) (stderr) and exits with a non-zero status code.
 
-> [!CAUTION]
-> The current version of the tool can only handle files with UNIX line endings (LF or `'\n'`)
-
 ## Prerequisites
 
 To use this tool, you must have [Node.js](https://nodejs.org/en) installed on your system.
