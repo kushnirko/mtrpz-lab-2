@@ -1,7 +1,7 @@
 {
-  "name": "mtrpz-lab-1",
+  "name": "mtrpz-lab-2",
   "version": "1.0.2",
-  "description": "Laboratory work 1 on the discipline \"Methodologies and technologies of software development\"",
+  "description": "Laboratory work 2 on the discipline \"Methodologies and technologies of software development\"",
   "main": "lib/app.js",
   "type": "module",
   "scripts": {
