@@ -1,5 +1,5 @@
 import { describe, test, expect } from '@jest/globals';
-import convertMdToHtml from '../lib/convertMdToHtml.js';
+import convertMdToHtml from '../lib/md-converting/convertMdToHtml.js';
 
 describe('Markdown to HTML converting module', () => {
   test('paragraphs', () => {
