@@ -63,7 +63,9 @@ _blocks_
   test('different length of inline elements', () => {
     const md = '**I** _do_ `not` _like_ **bugs!**';
     const html = convertMdToHtml(md);
-    expect(html).toBe('<p><b>I</b> <i>do</i> <tt>not</tt> <i>like</i> <b>bugs!</b></p>');
+    expect(html).toBe(
+      '<p><b>I</b> <i>do</i> <tt>not</tt> <i>like</i> <b>bugs!</b></p>',
+    );
   });
 
   test('text with punctuations', () => {

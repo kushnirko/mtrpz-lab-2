@@ -13,14 +13,18 @@ describe('Markdown validation module', () => {
     const md = 'Paragraph 1\n\n\nParagraph 2';
     const err = validateMd(md);
     expect(err).toBeInstanceOf(Error);
-    expect(err.message).toBe('invalid markdown (too many spaces between paragraphs)');
+    expect(err.message).toBe(
+      'invalid markdown (too many spaces between paragraphs)',
+    );
   });
 
   test('unpaired markup of preformatted text', () => {
     const md = 'This text should\n```\ncause an error';
     const err = validateMd(md);
     expect(err).toBeInstanceOf(Error);
-    expect(err.message).toBe('invalid markdown (unpaired  markup of preformatted text)');
+    expect(err.message).toBe(
+      'invalid markdown (unpaired  markup of preformatted text)',
+    );
   });
 
   test('valid markup of preformatted text', () => {
@@ -33,7 +37,9 @@ describe('Markdown validation module', () => {
     const md = 'This text should **cause an error';
     const err = validateMd(md);
     expect(err).toBeInstanceOf(Error);
-    expect(err.message).toBe('invalid markdown (unpaired markup of inline element)');
+    expect(err.message).toBe(
+      'invalid markdown (unpaired markup of inline element)',
+    );
   });
 
   test('nesting markup', () => {

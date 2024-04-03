@@ -13,14 +13,15 @@ The tool also validates Markdown markup for correctness. If errors are encounter
 
 To use this tool, you must have [Node.js](https://nodejs.org/en) installed on your system.
 
-> [!NOTE] 
+> [!NOTE]
 > You can install the current long-term support version of Node.js on the platform's official [download page](https://nodejs.org/en/download)
 
 ## Installation
 
 Clone this repository to the desired location on your system:
+
 ```bash
-git clone --depth 1 https://github.com/kushnirko/mtrpz-lab-1.git /path/to/desired/location/ 
+git clone --depth 1 https://github.com/kushnirko/mtrpz-lab-1.git /path/to/desired/location/
 ```
 
 > [!NOTE]
@@ -29,19 +30,23 @@ git clone --depth 1 https://github.com/kushnirko/mtrpz-lab-1.git /path/to/desire
 ## Usage
 
 1. Navigate to the directory where the repository was cloned:
+
 ```bash
 cd /path/to/repository/
 ```
 
 2. Go to the `lib/` directory:
+
 ```bash
 cd lib/
 ```
 
-3. Run one of the following commands (you can use **_*.md_** or **_*.txt_** as input files):
+3. Run one of the following commands (you can use **_\*.md_** or **_\*.txt_** as input files):
+
 ```bash
 node app.js /path/to/input.md
 ```
+
 ```bash
 node app.js /path/to/input.txt --out /path/to/output.html
 ```
