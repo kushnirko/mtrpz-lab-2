@@ -4,7 +4,7 @@ import {
   cutPreformatBlocks,
   pastePreformatBlocks,
   convertInlineElements,
-} from '../lib/md-converting/utils.js';
+} from '../../lib/md-converting/utils.js';
 
 describe('Markdown converting utils module', () => {
   test('Function determineEol', () => {

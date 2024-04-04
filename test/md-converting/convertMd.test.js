@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import convertMd from '../lib/md-converting/convertMd.js';
+import convertMd from '../../lib/md-converting/convertMd.js';
 
 describe('Markdown converting module', () => {
   test('invalid format', () => {

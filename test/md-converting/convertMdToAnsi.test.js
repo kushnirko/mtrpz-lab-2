@@ -1,5 +1,5 @@
 import { describe, test, expect } from '@jest/globals';
-import convertMdToAnsi from '../lib/md-converting/convertMdToAnsi.js';
+import convertMdToAnsi from '../../lib/md-converting/convertMdToAnsi.js';
 
 describe('Markdown to ANSI escapes converting module', () => {
   test('preformatted text markup', () => {
