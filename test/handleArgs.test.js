@@ -1,16 +1,13 @@
 import {
-  jest,
-  describe,
-  test,
-  expect,
+  jest, describe, test, expect,
 } from '@jest/globals';
 import handleArgs from '../lib/handleArgs.js';
 
-const mockArgv = (...args) => jest.replaceProperty(
-  process,
-  'argv',
-  ['this will be sliced', 'this will also be sliced', ...args],
-);
+const mockArgv = (...args) => jest.replaceProperty(process, 'argv', [
+  'this will be sliced',
+  'this will also be sliced',
+  ...args,
+]);
 
 describe('CMD arguments handling module', () => {
   test('no arguments', () => {

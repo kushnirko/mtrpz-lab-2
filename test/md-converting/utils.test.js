@@ -43,7 +43,10 @@ preformatted
 %PRE{2}PRE%`;
     const preformatBlocks = ['This **text**', '3', '_blocks_'];
     const replacement = { start: '🍏', end: '🍎' };
-    const res = pastePreformatBlocks(preformatBlocks, replacement)(tempMetadata);
+    const res = pastePreformatBlocks(
+      preformatBlocks,
+      replacement,
+    )(tempMetadata);
     expect(res).toBe(`🍏This **text**🍎
 contains
 🍏3🍎

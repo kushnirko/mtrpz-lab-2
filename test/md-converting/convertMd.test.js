@@ -5,7 +5,9 @@ describe('Markdown converting module', () => {
   test('invalid format', () => {
     const md = 'Some **meaningful** text';
     const format = 'none';
-    expect(() => convertMd(md, format)).toThrow('unsupported output format - none');
+    expect(() => convertMd(md, format)).toThrow(
+      'unsupported output format - none',
+    );
   });
 
   test('html format', () => {
@@ -33,7 +35,9 @@ describe('Markdown converting module', () => {
   test('different length of inline elements', () => {
     const md = '**I** _do_ `not` _like_ **bugs!**';
     const html = convertMd(md, 'html');
-    expect(html).toBe('<p><b>I</b> <i>do</i> <tt>not</tt> <i>like</i> <b>bugs!</b></p>');
+    expect(html).toBe(
+      '<p><b>I</b> <i>do</i> <tt>not</tt> <i>like</i> <b>bugs!</b></p>',
+    );
   });
 
   test('text with punctuations', () => {

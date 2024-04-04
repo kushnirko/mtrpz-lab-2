@@ -1,9 +1,5 @@
 import {
-  describe,
-  beforeAll,
-  afterAll,
-  test,
-  expect,
+  describe, beforeAll, afterAll, test, expect,
 } from '@jest/globals';
 import { mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { validateInputPath, validateOutputPath } from '../lib/validatePath.js';
@@ -30,12 +26,16 @@ describe('Paths validation module', () => {
 
   test('non-existent input file', () => {
     const path = './paths/non-existent.md';
-    expect(() => validateInputPath(path)).toThrow('file non-existent.md does not exist');
+    expect(() => validateInputPath(path)).toThrow(
+      'file non-existent.md does not exist',
+    );
   });
 
   test('non-readable input file', () => {
     const path = './paths/non-readable.md';
-    expect(() => validateInputPath(path)).toThrow('file non-readable.md is not readable');
+    expect(() => validateInputPath(path)).toThrow(
+      'file non-readable.md is not readable',
+    );
   });
 
   test('not *.md input file', () => {
@@ -55,22 +55,30 @@ describe('Paths validation module', () => {
 
   test('non-existent output path', () => {
     const path = './paths/non-existent/non-existent.txt';
-    expect(() => validateOutputPath(path, 'pdf')).toThrow('directory ./paths/non-existent does not exist');
+    expect(() => validateOutputPath(path, 'pdf')).toThrow(
+      'directory ./paths/non-existent does not exist',
+    );
   });
 
   test('non-writable output file', () => {
     const path = './paths/non-writable.txt';
-    expect(() => validateOutputPath(path, 'html')).toThrow('file non-writable.txt is not writable');
+    expect(() => validateOutputPath(path, 'html')).toThrow(
+      'file non-writable.txt is not writable',
+    );
   });
 
   test('not *.txt or *.html output file', () => {
     const path = './paths/valid.xml';
-    expect(() => validateOutputPath(path, 'html')).toThrow('invalid output file type');
+    expect(() => validateOutputPath(path, 'html')).toThrow(
+      'invalid output file type',
+    );
   });
 
   test('*.html output file but not html format', () => {
     const path = './paths/valid.html';
-    expect(() => validateOutputPath(path, 'ansi')).toThrow('html file type can be used for html format only');
+    expect(() => validateOutputPath(path, 'ansi')).toThrow(
+      'html file type can be used for html format only',
+    );
   });
 
   test('valid output file', () => {

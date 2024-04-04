@@ -29,7 +29,7 @@ git clone --depth 1 https://github.com/kushnirko/mtrpz-lab-2.git /path/to/desire
 ## Usage
 
 1. Navigate to the directory where the repository was cloned (or where the source code was placed):
-  
+
 ```bash
 cd /path/to/converter/location/
 ```
