@@ -22,6 +22,14 @@ describe('Markdown converting module', () => {
     expect(ansi).toBe('Some \x1b[1mmeaningful\x1b[22m text');
   });
 
+  test('not unix-like eol', () => {
+    const md = 'This _text_\rhas **a**\rnon-UNIX `EOL`';
+    const ansi = convertMd(md, 'ansi');
+    expect(ansi).toBe(
+      'This \x1b[3mtext\x1b[23m\rhas \x1b[1ma\x1b[22m\rnon-UNIX \x1b[7mEOL\x1b[27m',
+    );
+  });
+
   test('different length of inline elements', () => {
     const md = '**I** _do_ `not` _like_ **bugs!**';
     const html = convertMd(md, 'html');
@@ -38,7 +46,7 @@ describe('Markdown converting module', () => {
 
   test('cyrillic text', () => {
     const md = 'Ходить **гарбуз**\n`по` городу';
-    const html = convertMd(md, 'ansi');
-    expect(html).toBe('Ходить \x1b[1mгарбуз\x1b[22m\n\x1b[7mпо\x1b[27m городу');
+    const ansi = convertMd(md, 'ansi');
+    expect(ansi).toBe('Ходить \x1b[1mгарбуз\x1b[22m\n\x1b[7mпо\x1b[27m городу');
   });
 });

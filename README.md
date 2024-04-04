@@ -100,7 +100,7 @@ _`_ ніж `виконана лабка з МТРПЗ`! `_`
 
 ## Testing
 
-There are **48** unit tests (located in the `test/` directory) written using the [Jest testing framework](https://jestjs.io). \
+There are **49** unit tests (located in the `test/` directory) written using the [Jest testing framework](https://jestjs.io). \
 To run them, install the necessary Jest packages and then use the appropriate npm script:
 
 ```bash
