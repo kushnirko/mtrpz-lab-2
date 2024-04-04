@@ -1,8 +1,10 @@
-# Simplified Markdown to HTML converter
+# Simplified Markdown converter
 
-**This command-line tool takes as input a path to a text file containing simplified Markdown markup and converts it to a fragment of HTML.**
+**This command-line tool takes as input a path to a text file containing simplified Markdown markup and converts it to HTML tags or ANSI escape sequences.**
 
-The resulting HTML markup is either printed to [standard output](https://en.wikipedia.org/wiki/Standard_streams) (stdout) or written to the output file if the path to it is specified using the `--out` flag.
+The resulting data is either printed to [standard output](https://en.wikipedia.org/wiki/Standard_streams) (stdout) or written to the output file if the path to it is specified using the `--out` flag.
+
+Output to the console is by default in ANSI escape sequences format, but if an output file path is specified, the converter will use HTML format. However, you can manually set the required format using the `--format=value` flag.
 
 The tool also validates Markdown markup for correctness. If errors are encountered, it prints the appropriate message to [standard error](https://en.wikipedia.org/wiki/Standard_streams) (stderr) and exits with a non-zero status code.
 
@@ -18,7 +20,7 @@ To use this tool, you must have [Node.js](https://nodejs.org/en) installed on yo
 Clone this repository to the desired location on your system:
 
 ```bash
-git clone --depth 1 https://github.com/kushnirko/mtrpz-lab-1.git /path/to/desired/location/
+git clone --depth 1 https://github.com/kushnirko/mtrpz-lab-2.git /path/to/desired/location/
 ```
 
 > [!NOTE]
@@ -26,10 +28,10 @@ git clone --depth 1 https://github.com/kushnirko/mtrpz-lab-1.git /path/to/desire
 
 ## Usage
 
-1. Navigate to the directory where the repository was cloned:
-
+1. Navigate to the directory where the repository was cloned (or where the source code was placed):
+  
 ```bash
-cd /path/to/repository/
+cd /path/to/converter/location/
 ```
 
 2. Go to the `lib/` directory:
@@ -38,19 +40,15 @@ cd /path/to/repository/
 cd lib/
 ```
 
-3. Run one of the following commands (you can use **_\*.md_** or **_\*.txt_** as input files):
+3. Run the following command:
 
 ```bash
-node app.js /path/to/input.md
-```
-
-```bash
-node app.js /path/to/input.txt --out /path/to/output.html
+node app.js /path/to/input.{md,txt} [--out /path/to/output.{txt,html}] [--format={ansi,html}]
 ```
 
 ## Example
 
-_This example shows exactly how the tool converts Markdown markup to HTML_
+_This example shows exactly how the tool converts Markdown markup_
 
 ### Input:
 
@@ -74,7 +72,7 @@ _В дружбі чи в коханні_ може не везе?
 _`_ ніж `виконана лабка з МТРПЗ`! `_`
 </pre>
 
-### Output:
+### Output for HTML format:
 
 ```html
 <p>
@@ -96,6 +94,28 @@ _`_ ніж `виконана лабка з МТРПЗ`! `_`
 <i>`</i> ніж <tt>виконана лабка з МТРПЗ</tt>! <tt>_</tt></p>
 ```
 
+### Output for ANSI escape sequences format
+
+## Testing
+
+There are **48** unit tests (located in the `test/` directory) written using the [Jest testing framework](https://jestjs.io). \
+To run them, install the necessary Jest packages and then use the appropriate npm script:
+
+```bash
+npm install jest @jest/globals
+```
+
+```bash
+npm run test
+```
+
+## Conclusion
+
+Using unit tests helped me save a lot of time when modifying the application. I added new functionality and immediately covered it with tests. Thus, it was no longer necessary to write temporary stubs to fully implement the system to see if a particular module works correctly. \
+I also noticed that writing the tests once and then running them with one command is much nicer than having to check everything manually every time 🙃.
+
 ## Links
 
-### [Revert commit](https://github.com/kushnirko/mtrpz-lab-1/commit/5a9332f863f6fbc53a02b869185d9409dee94b7c)
+### [Revert commit](https://github.com/kushnirko/mtrpz-lab-2/commit/158f8c555173593e06cc947b5985a66dbacfe514)
+
+### [Commit with failed tests](https://github.com/kushnirko/mtrpz-lab-2/commit/0b727832a48600496eb77a0fe5d5db486c2e1cdb)
