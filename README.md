@@ -96,6 +96,8 @@ _`_ ніж `виконана лабка з МТРПЗ`! `_`
 
 ### Output for ANSI escape sequences format
 
+![output-ansi](https://github.com/kushnirko/mtrpz-lab-2/assets/115948037/7bd1b3e3-288a-403d-b0c1-eb46595b3dd7)
+
 ## Testing
 
 There are **48** unit tests (located in the `test/` directory) written using the [Jest testing framework](https://jestjs.io). \
