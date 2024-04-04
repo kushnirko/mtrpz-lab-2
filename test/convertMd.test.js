@@ -37,7 +37,7 @@ describe('Markdown converting module', () => {
   });
 
   test('cyrillic text', () => {
-    const md = 'Ходить **гарбуз**\n`по` городу';
+    const md = 'Ходить **🎃**\n`по` городу';
     const html = convertMd(md, 'ansi');
     expect(html).toBe('Ходить \x1b[1mгарбуз\x1b[22m\n\x1b[7mпо\x1b[27m городу');
   });
