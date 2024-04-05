@@ -1,6 +1,6 @@
 {
   "name": "mtrpz-lab-2",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Laboratory work 2 on the discipline \"Methodologies and technologies of software development\"",
   "main": "lib/app.js",
   "type": "module",
